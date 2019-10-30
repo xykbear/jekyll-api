@@ -1,0 +1,14 @@
+---
+limit: 100
+---
+
+{% for repository in site.github.public_repositories limit: page.limit %}
+    
+    {
+      "name": "{{ repository.name }}",
+      "url"     : "{{ repository.html_url }}",
+    }
+
+    {% unless forloop.last %},{% endunless %}
+
+{% endfor %}
