@@ -6,7 +6,8 @@ limit: 100
     
     {
       "name": "{{ repository.name }}",
-      "url"     : "{{ repository.html_url }}",
+      "url": "{{ repository.html_url }}",
+      "description": "{{ repository.description }}",
     }
 
     {% unless forloop.last %},{% endunless %}
